@@ -1,16 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import "bootstrap/dist/css/bootstrap.css";
+import './assets/scss/index.scss';
 
-function App() {
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+
+import HomePage from './views/HomePage';
+import ExerciseTwo from './views/ExerciseTwo';
+import ExerciseOne from './views/ExerciseOne';
+
+// import HomePage from './views/HomePage';
+
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> hello everyone!!!
-        </p>
-        <p>learn react</p>
-      </header>
+    <div>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={HomePage}/>
+          <Route exact path="/exercise1" component={ExerciseOne} />
+          <Route exact path="/exercise2" component={ExerciseTwo} />
+        </Switch>
+      </Router>
     </div>
   );
 }

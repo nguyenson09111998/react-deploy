@@ -1,0 +1,12 @@
+
+@import "./core/accordion";
+@import "./core/banner";
+@import "./core/card";
+@import "./core/tab";
+
+.categories {
+  padding: 32px 16px;
+  .col{
+    padding-bottom: 16px;
+  }
+}
