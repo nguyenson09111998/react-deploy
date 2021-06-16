@@ -1,14 +1,12 @@
 import React from 'react'
 import {
   Container,
-  Button,
   Row,
   Col
 } from "reactstrap";
 import Card from "../components/Card";
 import Banner from '../components/Banner';
 import ImageCard from '../assets/images/400x300.png';
-import { Link } from 'react-router-dom';
 
 const ExerciseOne = () => {
   return (
