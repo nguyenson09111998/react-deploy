@@ -9,7 +9,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> hello everyone!!!
         </p>
-        
+        <p>learn react</p>
       </header>
     </div>
   );
