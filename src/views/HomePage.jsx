@@ -7,13 +7,15 @@ import { Link } from 'react-router-dom'
 
 const HomePage = () => {
   return (
-    <div className="button__categories">
-      <Link to="/exercise1">
-        <Button color="primary" className="button__position">Exercise1</Button>
-      </Link>
-      <Link to="/exercise2">
-        <Button color="secondary" className="button__position">Exercise2</Button>
-      </Link>
+    <div className="home__wrapper--absolute">
+      <div className="home__center">
+        <Link to="/exercise1">
+          <Button color="primary">Exercise1</Button>
+        </Link>
+        <Link to="/exercise2">
+          <Button color="secondary">Exercise2</Button>
+        </Link>
+      </div>
     </div>
   );
 }

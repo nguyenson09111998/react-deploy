@@ -6,46 +6,46 @@ import {
 } from "reactstrap";
 import Card from "../components/Card";
 import Banner from '../components/Banner';
-import ImageCard from '../assets/images/400x300.png';
+
+const cards = [
+  {
+    imageUrl: 'http://via.placeholder.com/400x300',
+    content: 'Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.'
+  },
+  {
+    imageUrl: 'http://via.placeholder.com/400x300',
+    content: 'form of a document or a typeface without relying on meaningful content.'
+  },
+  {
+    imageUrl: 'http://via.placeholder.com/400x300',
+    content: 'Lorem ipsum is a placeholder text commonly used to document or a typeface without relying on meaningful content.'
+  }
+]
 
 const ExerciseOne = () => {
   return (
-    <React.Fragment>
+    <div className="exercise__one">
       <Banner
         title="Hello Developer"
-        content="Lorem ipsum is a placeholder text commonly used to demonstrate the visual form"
+        description="Lorem ipsum is a placeholder text commonly used to demonstrate the visual form"
+        desktopImageUrl="http://via.placeholder.com/1920x650"
+        mobileImageUrl="https://via.placeholder.com/600x600"
       />
-
-      <Container className="categories">
+      <Container className="exercise__one--body">
         <Row xs="1" md="3">
-          <Col >
-            <Card
-              imageUrl={ImageCard}
-              content="Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. "
-            />
-          </Col>
-          <Col>
-            <Card
-              imageUrl={ImageCard}
-              content=" form of a document or a typeface without relying on meaningful content. "
-            />
-          </Col>
-          <Col>
-            <Card
-              imageUrl={ImageCard}
-              content=" Lorem ipsum is a placeholder text commonly used to document or a typeface without relying on meaningful content. "
-            />
-          </Col>
-        
+          {cards.map((card, index) => {
+            return (
+              <Col key={index}>
+                <Card
+                  imageUrl={card.imageUrl}
+                  content={card.content}
+                />
+              </Col>
+            )
+          })}
         </Row>
       </Container>
-
-      {/* <div className="button__container">
-        <Link to="/">
-          <Button color="info" className="button">Back</Button>
-        </Link>
-      </div> */}
-    </React.Fragment>
+    </div>
   );
 }
 
