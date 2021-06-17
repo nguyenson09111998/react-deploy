@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { TabContent, TabPane, Nav, NavItem, NavLink, Row, Col } from 'reactstrap';
+import { TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap';
 import classnames from 'classnames';
 
 const Tabs = (props) => {
-  const [data, setData] = useState(props.data || []);
+  const [data] = useState(props.data || []);
   const [activeTab, setActiveTab] = useState(1);
 
 

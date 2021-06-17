@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Card, CardBody, CardHeader, Collapse } from "reactstrap";
 
 const Accordions = (props) => {
-  const [data, setData] = useState(props.data || []);
+  const [data] = useState(props.data || []);
   const [openIndex, setOpenIndex] = useState(1);
   return (
     <React.Fragment>

@@ -6,8 +6,6 @@
   justify-content: center;
   background-size: cover;
   background-position: center center;
-  // background-image: url("../../../assets/images/1920x650.png");
-
   &__title {
     font-weight: bold;
     font-size: 60px;
@@ -22,8 +20,6 @@
 
 @media only screen and (max-width: 600px) {
   .banner {
-    // background-image: url("../../../assets/images/600x600.png");
-
     &__title {
       font-size: 40px;
     }
