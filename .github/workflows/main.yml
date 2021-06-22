@@ -46,9 +46,8 @@ jobs:
     - name: executing remote ssh commands using password
       uses: appleboy/ssh-action@master
       with:
-        host: ptemagicpractice.com
-        username: sonnh0998
-        key: $SSH_PRIVATE_KEY
+        host: 54.206.151.69
+        username: ubuntu
+        key: ${{ secrets.SSH_PRIVATE_KEY }} 
         port: 22
-        script: |
-          docker pull sonhn98/simplereact
+        script: whoami
