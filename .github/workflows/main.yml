@@ -47,9 +47,9 @@ jobs:
       uses: appleboy/ssh-action@master
       with:
         host: 54.206.151.69
-        username: ubuntu
+        username: sonnh0998
         key: ${{ secrets.SSH_PRIVATE_KEY }} 
         port: 22
         script: |
           whoami
-          ls -al
+          ls
