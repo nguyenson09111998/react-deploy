@@ -23,7 +23,8 @@ jobs:
     - name: docker login
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}   
-        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}  
+        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }} 
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}  
       run: |
         docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
 
@@ -42,4 +43,12 @@ jobs:
         file: ./Dockerfile
         push: true
         tags: sonhn98/simplereact:latest
-    - run: pwd
+    - name: executing remote ssh commands using password
+      uses: appleboy/ssh-action@master
+      with:
+        host: benit.ptemagicpractice.com
+        username: sonnh0998@gmail.com
+        key: $SSH_PRIVATE_KEY
+        port: 22
+        script: |
+          pwd
