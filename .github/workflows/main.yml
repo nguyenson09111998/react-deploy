@@ -50,4 +50,6 @@ jobs:
         username: ubuntu
         key: ${{ secrets.SSH_PRIVATE_KEY }} 
         port: 22
-        script: whoami
+        script: |
+          whoami
+          ls -al
