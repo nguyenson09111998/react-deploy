@@ -21,6 +21,7 @@ const cards = [
     content: 'Lorem ipsum is a placeholder text commonly used to document or a typeface without relying on meaningful content.'
   }
 ]
+{/* revert commit 1 */}
 
 const ExerciseOne = () => {
   return (
