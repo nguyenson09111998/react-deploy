@@ -44,7 +44,11 @@ jobs:
       with:
         host: 54.206.151.69
         username: ubuntu
-        key: ${{ secrets.SSH_PRIVATE_KEY }} 
+        key: $SSH_PRIVATE_KEY
         port: 22
         script: |
+          docker container stop simplereact
+          docker container rm simplereact
+          docker image rm sonhn98/simplereact
           docker pull sonhn98/simplereact
+          docker run -d -t -p 3000:80/tcp --name simplereact sonhn98/simplereact:latest
