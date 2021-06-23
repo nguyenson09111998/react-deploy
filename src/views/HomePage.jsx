@@ -12,10 +12,9 @@ const HomePage = () => {
         <Link to="/exercise1">
           <Button color="primary">Exercise1</Button>
         </Link>
-        <Link to="/exercise2">
+        {/* <Link to="/exercise2">
           <Button color="secondary">Exercise2</Button>
-        </Link>
-        {/* revert commit 1 */}
+        </Link> */}
       </div>
     </div>
   );

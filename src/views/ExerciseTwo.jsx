@@ -8,7 +8,6 @@ const ExerciseTwo = () => {
     <div className="exercise__two">
       <div className="exercise__two--tabs"><Tabs data={data} /></div>
       <div className="exercise__two--accordion"><Accordions data={data} /></div>
-      {/* revert commit 1 */}
     </div>
   );
 }
