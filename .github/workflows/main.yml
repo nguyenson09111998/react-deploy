@@ -44,7 +44,7 @@ jobs:
       with:
         host: 54.206.151.69
         username: ubuntu
-        key: $SSH_PRIVATE_KEY
+        key: ${{ secrets.SSH_PRIVATE_KEY }} 
         port: 22
         script: |
           docker container stop simplereact
